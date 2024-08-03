@@ -92,7 +92,7 @@ JSON은 객체와 배열을 중심으로 구성됩니다. 예를 들어, 다음�
 </head>
 <body>
    
-  <h1>ES6 - JSON 문법</h1>
+  <h1>24. ES6 - JSON 문법</h1>
 
   <p>JSON(JavaScript Object Notation)은 데이터를 효율적으로 표현하고 전송하기 위한 경량의 데이터 형식입니다. JSON은 텍스트 형식이며, JavaScript 객체를 기반으로 하고 있어 JavaScript에서 쉽게 파싱하고 생성할 수 있습니다. 또한 다른 프로그래밍 언어에서도 널리 사용되고 있습니다.</p>
 
@@ -196,21 +196,24 @@ JSON은 객체와 배열을 중심으로 구성됩니다. 예를 들어, 다음�
       엑셀 to JSON 변환사이트 :  https://shancarter.github.io/mr-data-converter/         
     */
 
-    // 2. JavaScript 객체를 JSON 문자열로 변환 :   
+    // JavaScript 객체를 JSON 문자열로 변환 :   
     // -  웹에서 데이터를 수신할 때 데이터는 항상 문자열입니다. 자바스크립트가 데이터를 다시 분석하려면  객체데이터로 변경해야 합니다. 
 
 
     //  1) JSON.parse() :  JSON 형식의 문자열을 JavaScript 객체로 변환합니다.
+    // - 주로 서버에서 받은 JSON 데이터를 JavaScript에서 사용하기 위해 객체로 변환할 때 사용됩니다.
     const jsonString = '{"name": "John", "age": 30}';     // JSON Data 
     const data = JSON.parse(jsonString);                  // 객체로 변환
     console.log(typeof data);                             //  Object
     console.log(data.name);                               // "John" 출력                 <= 객체 Data 출력
     
     //  2) JSON.stringify() :  JavaScript 객체를 JSON 형식의 문자열로 변환합니다.
+    // - 주로 자바스크립트 객체를 서버로 전송하기 위해 JSON 형식으로 변환할 때 사용됩니다.
     const user = { name: "Alice", age: 25 };              // 객체 Data
     const json = JSON.stringify(user);                    // JSON으로 변환
     console.log(typeof json);                             //  String  <= JSON 형식의 문자열
-    console.log(json);                                    // '{"name":"Alice","age":25}' <= JSON Data 출력
+    console.log(json);                                    // '{"name":"Alice","age":25}' <= JSON Data 
+
 
   </script>
 
